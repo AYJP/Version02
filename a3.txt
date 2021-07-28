@@ -1,0 +1,26 @@
+//手写懒汉模式
+
+//定义类
+public class Singleton01(){
+
+//私有化构造器
+  private Singleton01(){
+  }
+  
+  //直接创建实例
+  private static Singleton01 St = new Singleton01;
+  
+  //定义get方法
+  private static Singleton01 getSingleton01(){
+    return this.St;
+  }
+  
+  public static void main(String[] args){
+    Singleton01 St = getSingleton01();
+    Singleton01 St1= getsingleton01();
+    
+    
+    System.out.println(St==St1);
+  } 
+
+}
